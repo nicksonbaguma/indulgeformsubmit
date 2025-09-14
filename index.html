@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Indulge Cake Haven Ug - Premium Cakes in Kiwatule, Kampala</title>
+    <meta name="description" content="A Haven for sweet memories!">
+    <style>
+        /* Modern CSS Reset with improved variables */
+        :root {
+            --primary-pink: #FFD1DC;
+            --dark-pink: #F8A8B8;
+            --gold: #D4AF37;
+            --white: #FFFFFF;
+            --off-white: #FFF9FB;
+            --brown: #5C4033;
+            --dark-brown: #3D2A1F;
+            --text-color: #333333;
+            --light-gray: #F5F5F5;
+            --medium-gray: #E0E0E0;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 50%;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--off-white);
+            overflow-x: hidden;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        /* Improved Typography with better mobile scaling */
+        h1, h2, h3, h4 {
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        h1 { 
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+        h2 { 
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+        }
+        h3 { 
+            font-size: clamp(1.5rem, 3.5vw, 2rem);
+        }
+        h4 { 
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+        }
+
+        p {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            margin-bottom: 1.5rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%; /* Changed from 90% to 100% for wider text */
+        }
+
+        .text-center { text-align: center; }
+        .text-gold { color: var(--gold); }
+        .text-brown { color: var(--brown); }
+        .text-white { color: var(--white); }
+
+        /* Improved Layout with better spacing */
+        .container {
+            width: 100%;
+            max-width: 1400px; /* Increased from 1200px */
+            margin: 0 auto;
+            padding: 0 2rem; /* Increased from 1.5rem */
+        }
+
+        .section {
+            padding: 5rem 0; /* Increased from 4rem */
+            position: relative;
+        }
+
+        .section-title {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .section-title h2 {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            max-width: 100%; /* Changed from 900px to 100% for wider text */
+            margin: 0 auto;
+            color: var(--text-color);
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            padding: 0 1rem;
+        }
+
+        /* Enhanced Buttons with better hover effects */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--gold);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Enhanced Header with better mobile behavior */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--primary-pink);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        header.sticky {
+            background-color: rgba(255, 209, 220, 0.98);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            min-width: 0; /* Allows text to truncate properly */
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-full);
+            border: 3px solid var(--gold);
+            box-shadow: var(--shadow-sm);
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            transform: rotate(10deg);
+        }
+
+        .logo-text {
+            min-width: 0; /* Allows text to truncate properly */
+        }
+
+        .logo-text h1 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            margin-bottom: 0.25rem;
+            color: var(--brown);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .logo-text p {
+            font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+            font-style: italic;
+            color: var(--brown);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin: 0 2rem;
+        }
+
+        .nav-links a {
+            position: relative;
+            font-weight: 500;
+            color: var(--brown);
+            padding: 0.5rem 0;
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+            white-space: nowrap;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* Social Icons - Always Visible */
+        .social-icons {
+            display: flex;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-full);
+            background-color: var(--gold);
+            color: var(--white);
+            font-size: 1rem;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        /* Removed hover effect that was hiding them */
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            background-color: var(--brown);
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--white);
+            cursor: pointer;
+            transition: var(--transition);
+            margin-left: 1rem;
+            flex-shrink: 0;
+        }
+
+        .hamburger:hover {
+            transform: scale(1.1);
+        }
+
+        /* Enhanced Hero Section with better text readability */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 100%; /* Changed from 900px to 100% for wider text */
+            padding: 0 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            padding: 0 1rem;
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Second Hero Section */
+        .second-hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--brown);
+            overflow: hidden;
+            background: url('imgs/2ndpage.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .second-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 209, 220, 0.98);
+            z-index: 0;
+        }
+
+        .second-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 100%; /* Changed from 900px to 100% for wider text */
+            padding: 0 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Enhanced Menu Section with better card animations */
+        .menu {
+            background-color: var(--white);
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            gap: 2rem;
+        }
+
+        .menu-item {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .menu-item:hover img {
+            transform: scale(1.05) translateZ(20px);
+        }
+
+        .menu-item-content {
+            padding: 1.5rem;
+            transform: translateZ(30px);
+        }
+
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--brown);
+        }
+
+        .menu-item p {
+            margin-bottom: 1rem;
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+
+        .price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* Enhanced About Section with better layout */
+        .about {
+            background-color: var(--primary-pink);
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .about-img, .about-content {
+            flex: 1 1 45%;
+            min-width: 300px;
+        }
+
+        .about-img {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: var(--transition);
+        }
+
+        .about-img:hover {
+            transform: scale(1.02);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.03);
+        }
+
+        .about-content h2 {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        /* Enhanced Gallery Section with hover effects */
+        .gallery {
+            background-color: var(--light-gray);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            height: 280px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        .gallery-item::before {
+            content: attr(data-title);
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-weight: 600;
+            z-index: 2;
+            transition: var(--transition);
+            opacity: 0;
+        }
+
+        .gallery-item:hover::before {
+            bottom: 0;
+            opacity: 1;
+        }
+
+        /* Enhanced Reviews Section with animated cards */
+        .reviews {
+            background-color: var(--white);
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .review-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(212, 175, 55, 0.1);
+            font-family: serif;
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .review-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            object-fit: cover;
+            margin-right: 1rem;
+            border: 2px solid var(--gold);
+            transition: var(--transition);
+        }
+
+        .review-card:hover .review-avatar {
+            transform: rotate(15deg);
+        }
+
+        .review-name {
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 0.25rem;
+        }
+
+        .review-rating {
+            color: var(--gold);
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Map Section */
+        .map-section {
+            background-color: var(--primary-pink);
+        }
+
+        .map-container {
+            height: 500px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-top: 2rem;
+            transition: var(--transition);
+        }
+
+        .map-container:hover {
+            transform: scale(1.01);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Enhanced Contact Section with better form styling */
+        .contact {
+            background-color: var(--white);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1 1 45%;
+            min-width: 300px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .contact-info p {
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        .contact-info i {
+            margin-right: 1rem;
+            color: var(--gold);
+            width: 24px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            color: blue;
+            border-radius: var(--radius-full);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: white;
+            transform: translateY(-5px) rotate(10deg);
+        }
+
+        .contact-form {
+            background-color: var(--off-white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .contact-form:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--brown);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--medium-gray);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--white);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Enhanced Footer with better layout */
+        footer {
+            background-color: var(--brown);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--gold), var(--primary-pink), var(--gold));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .footer-section p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            max-width: 100%;
+            overflow-wrap: break-word;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+
+        .footer-links i {
+            margin-right: 0.75rem;
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Enhanced Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            color: var(--white);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--brown);
+            transform: translateY(-5px) rotate(360deg);
+        }
+
+        /* Enhanced Floating Buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 999;
+        }
+
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .floating-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            transform: translateX(-100%) skewX(-15deg);
+            transition: 0.5s;
+        }
+
+        .floating-btn:hover::after {
+            transform: translateX(100%) skewX(-15deg);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+        }
+
+        .message-btn {
+            background-color: var(--gold);
+        }
+
+        /* Enhanced Pastry Section Styles */
+        .pastry-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            padding: 30px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .pastry-section:hover {
+            box-shadow: var(--shadow-lg);
+        }
+
+        .pastry-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .pastry-header h2 {
+            color: var(--brown);
+            font-size: clamp(1.75rem, 4vw, 2.2rem);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .pastry-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+        }
+
+        .pastry-header p {
+            color: #555;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            max-width: 100%; /* Changed from 800px to 100% for wider text */
+            margin: 0 auto;
+            padding: 0 1rem;
+            word-wrap: break-word;
+        }
+
+        .pastry-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .pastry-menu {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--primary-pink);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .pastry-menu:hover {
+            transform: translateY(-5px);
+        }
+
+        .pastry-uses {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--white);
+            border: 2px solid var(--primary-pink);
+            border-radius: var(--radius-md);
+            padding: 25px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .pastry-uses:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            color: var(--brown);
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--gold);
+        }
+
+        .pastry-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .pastry-table th {
+            background-color: var(--gold);
+            color: var(--white);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .pastry-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pastry-table tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .pastry-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .uses-list {
+            list-style-type: none;
+        }
+
+        .uses-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+        }
+
+        .uses-list li::before {
+            content: '•';
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .note {
+            background-color: rgba(212, 175, 55, 0.1);
+            padding: 20px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid var(--gold);
+            margin-top: 30px;
+        }
+
+        .note p {
+            margin: 0;
+            color: var(--brown);
+            font-style: italic;
+            font-size: clamp(0.85rem, 2vw, 1rem);
+        }
+
+        .emoji {
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+
+        /* Responsive Styles with better breakpoints */
+        @media (max-width: 992px) {
+            .nav-links {
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-pink);
+                padding: 1.5rem;
+                box-shadow: var(--shadow-md);
+                gap: 1rem;
+            }
+
+            .social-icons {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .about-container {
+                flex-direction: column;
+            }
+            
+            .hero, .second-hero {
+                min-height: 600px;
+            }
+            
+            .hero-content, .second-hero-content {
+                padding: 0 1rem;
+            }
+            
+            .hero p, .second-hero p {
+                padding: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero, .second-hero {
+                min-height: 500px;
+            }
+
+            .hero h1, .second-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p, .second-hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .map-container {
+                height: 350px;
+            }
+            
+            .pastry-container {
+                flex-direction: column;
+            }
+            
+            .pastry-menu, .pastry-uses {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logo-text h1 {
+                font-size: 1.25rem;
+            }
+
+            .hero h1, .second-hero h1 {
+                font-size: 2rem;
+            }
+
+            .menu-container {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-buttons {
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .floating-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+            
+            .pastry-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .pastry-header p {
+                font-size: 0.9rem;
+            }
+            
+            .section-title {
+                font-size: 1.25rem;
+            }
+            
+            .uses-list li {
+                font-size: 0.85rem;
+            }
+            
+            .note p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="imgs/indulge logo.jpg" alt="The Indulge Cake Haven Logo">
+                    <div class="logo-text">
+                        <h1>The Indulge Cake Haven Ug</h1>
+                        <p>Exceptional taste, Delicious memories</p>
+                    </div>
+                </div>
+                
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#custom-cakes">Custom Cakes</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="social-icons">
+                    <a href="https://facebook.com/IndulgeCakeHavenUG" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/the_indulge_cake_haven_ug?igsh=NTd3dzE4ZjMybXRo&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@the_indulge_cake_haven?_t=ZM-8xlhKCy6tde&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/256743956530" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://x.com/indulge_ug?s=21" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/the-indulge-cake-haven-ug/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero" id="home">
+        <video autoplay muted loop class="hero-video">
+            <source src="imgs/cakes.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>A Haven for sweet memories</h1>
+            <p>The Indulge Cake Haven UG is a purpose driven bakery offering fresh cakes, pastries, and baking classes. Since 2020, we've combined exceptional taste with impact donating 70% of our profits to support vulnerable teenage mothers through the Benefaction Alms Foundation Uganda.</p>         
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+                <a href="#contact" class="btn btn-outline">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Hero Section with Image Background -->
+    <section class="second-hero">
+        <div class="second-hero-content">
+            <h1>A Haven for sweet memories</h1>
+            <p>The Indulge Cake Haven UG is a cozy, purpose-driven bakery that serves freshly baked, handcrafted treats made with love. Every order — from our delightful cakes to our mouthwatering pastries — is crafted to bring joy, warmth, and exceptional taste to every bite. We bake beautiful, neat, delicious cakes for birthdays, weddings, anniversaries, baby and bridal showers, introductions and any special events made just the way you like them.</p>
+            <h1>The Indulge Academy</h1>
+            <p>At The Indulge Academy, we offer hands-on beginner baking classes designed to build your skills and confidence in the kitchen. Learn to bake a variety of cakes, pastries, and snacks in a fun, supportive environment — no experience needed! All equipment and ingredients are provided, and every student receives a certificate upon completion of the course.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section menu" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Delicious Menu</h2>
+                <p>From classic favorites to innovative creations, each item is made with the finest ingredients and a touch of love.</p>
+            </div>
+            
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/cake1.jpeg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Two Tier Madeira</h3>
+                        <p>Five layers, three flavors in 9'6' size. Perfect for weddings and special celebrations.</p>
+                        <span class="price">UGX 200,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/elegantyellow.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Elegant Yellow Bloom Cake</h3>
+                        <p>A classy 3-layer cake with three flavors of your choice, beautifully finished with fondant covering. Adorned with delicate floral accents, golden toppers, and a “Happy Birthday” sign — making it a perfect centerpiece for any celebration.
+	•	Size: 8-inch round, 7-inch high
+	•	Flavors: Choice of 3 (Vanilla, Chocolate, Red Velvet, Lemon, etc.)</p>
+                        <span class="price">UGX 120,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/pinkribbon.jpg" alt="Matoke Spice Cake">
+                    <div class="menu-item-content">
+                        <h3>Pink Ribbon Buttercream Cake</h3>
+                        <p>A charming 2-layer cake with soft pink ribbon detailing, frosted in smooth buttercream and finished with edible golden pearls. Its elegant simplicity makes it perfect for birthdays, small celebrations, and even photoshoots.
+	•	Size: 7-inch round, 5.5-inch high (≈ 1kg)
+	•	Flavors (choose 1): Vanilla, Strawberry, Bubblegum, Pineapple, Blueberry, or Lemon
+</p>
+                        <span class="price">UGX 60,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/pinkdrip.jpg" alt="Gold-Dusted Cupcakes">
+                    <div class="menu-item-content">
+                        <h3>Pink Drip & Cupcake Topper Cake</h3>
+                        <p>A stunning 3-layer cake with a mix of two delicious flavors, frosted with smooth buttercream icing. Decorated with an elegant black drip, edible pearls, a cupcake topper, and a butterfly accent.
+	•	Size: 8-inch round, 6.5-inch high
+	•	Perfect for birthdays, anniversaries, and celebrations of love.
+.</p>
+                        <span class="price">UGX 100,000 each</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth1.jpg" alt="Chocolate Noir Entremet">
+                    <div class="menu-item-content">
+                        <h3>Chocolate Noir Entremet</h3>
+                        <p>Layers of dark chocolate mousse, chocolate sponge, and chocolate glaze.</p>
+                        <span class="price">UGX 90,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth2.jpg" alt="Rainbow Eclairs">
+                    <div class="menu-item-content">
+                        <h3>Rainbow Eclairs</h3>
+                        <p>Colorful choux pastry filled with vanilla custard and topped with glaze.</p>
+                        <span class="price">UGX 10,000 each</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/birth4.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Two Tier Madeira</h3>
+                        <p>Five layers, three flavors in 9'6' size. Perfect for weddings and special celebrations.</p>
+                        <span class="price">UGX 200,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth5.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Elegant Yellow Bloom Cake</h3>
+                        <p>A classy 3-layer cake with three flavors of your choice, beautifully finished with fondant covering. Adorned with delicate floral accents, golden toppers, and a “Happy Birthday” sign — making it a perfect centerpiece for any celebration.
+	•	Size: 8-inch round, 7-inch high
+	•	Flavors: Choice of 3 (Vanilla, Chocolate, Red Velvet, Lemon, etc.)</p>
+                        <span class="price">UGX 120,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth6.jpg" alt="Matoke Spice Cake">
+                    <div class="menu-item-content">
+                        <h3>Pink Ribbon Buttercream Cake</h3>
+                        <p>A charming 2-layer cake with soft pink ribbon detailing, frosted in smooth buttercream and finished with edible golden pearls. Its elegant simplicity makes it perfect for birthdays, small celebrations, and even photoshoots.
+	•	Size: 7-inch round, 5.5-inch high (≈ 1kg)
+	•	Flavors (choose 1): Vanilla, Strawberry, Bubblegum, Pineapple, Blueberry, or Lemon
+</p>
+                        <span class="price">UGX 60,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth7.jpg" alt="Gold-Dusted Cupcakes">
+                    <div class="menu-item-content">
+                        <h3>Pink Drip & Cupcake Topper Cake</h3>
+                        <p>A stunning 3-layer cake with a mix of two delicious flavors, frosted with smooth buttercream icing. Decorated with an elegant black drip, edible pearls, a cupcake topper, and a butterfly accent.
+	•	Size: 8-inch round, 6.5-inch high
+	•	Perfect for birthdays, anniversaries, and celebrations of love.
+.</p>
+                        <span class="price">UGX 100,000 each</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth8.jpg" alt="Chocolate Noir Entremet">
+                    <div class="menu-item-content">
+                        <h3>Chocolate Noir Entremet</h3>
+                        <p>Layers of dark chocolate mousse, chocolate sponge, and chocolate glaze.</p>
+                        <span class="price">UGX 90,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth9.jpg" alt="Rainbow Eclairs">
+                    <div class="menu-item-content">
+                        <h3>Rainbow Eclairs</h3>
+                        <p>Colorful choux pastry filled with vanilla custard and topped with glaze.</p>
+                        <span class="price">UGX 10,000 each</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/birth10.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Two Tier Madeira</h3>
+                        <p>Five layers, three flavors in 9'6' size. Perfect for weddings and special celebrations.</p>
+                        <span class="price">UGX 200,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth11.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Elegant Yellow Bloom Cake</h3>
+                        <p>A classy 3-layer cake with three flavors of your choice, beautifully finished with fondant covering. Adorned with delicate floral accents, golden toppers, and a “Happy Birthday” sign — making it a perfect centerpiece for any celebration.
+	•	Size: 8-inch round, 7-inch high
+	•	Flavors: Choice of 3 (Vanilla, Chocolate, Red Velvet, Lemon, etc.)</p>
+                        <span class="price">UGX 120,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth12.jpg" alt="Matoke Spice Cake">
+                    <div class="menu-item-content">
+                        <h3>Pink Ribbon Buttercream Cake</h3>
+                        <p>A charming 2-layer cake with soft pink ribbon detailing, frosted in smooth buttercream and finished with edible golden pearls. Its elegant simplicity makes it perfect for birthdays, small celebrations, and even photoshoots.
+	•	Size: 7-inch round, 5.5-inch high (≈ 1kg)
+	•	Flavors (choose 1): Vanilla, Strawberry, Bubblegum, Pineapple, Blueberry, or Lemon
+</p>
+                        <span class="price">UGX 60,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth13.jpg" alt="Gold-Dusted Cupcakes">
+                    <div class="menu-item-content">
+                        <h3>Pink Drip & Cupcake Topper Cake</h3>
+                        <p>A stunning 3-layer cake with a mix of two delicious flavors, frosted with smooth buttercream icing. Decorated with an elegant black drip, edible pearls, a cupcake topper, and a butterfly accent.
+	•	Size: 8-inch round, 6.5-inch high
+	•	Perfect for birthdays, anniversaries, and celebrations of love.
+.</p>
+                        <span class="price">UGX 100,000 each</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth14.jpg" alt="Chocolate Noir Entremet">
+                    <div class="menu-item-content">
+                        <h3>Chocolate Noir Entremet</h3>
+                        <p>Layers of dark chocolate mousse, chocolate sponge, and chocolate glaze.</p>
+                        <span class="price">UGX 90,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth15.jpg" alt="Rainbow Eclairs">
+                    <div class="menu-item-content">
+                        <h3>Rainbow Eclairs</h3>
+                        <p>Colorful choux pastry filled with vanilla custard and topped with glaze.</p>
+                        <span class="price">UGX 10,000 each</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treat Packages Section -->
+    <section class="section menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Indulge Treat Packages</h2>
+                <p>You don't need a special occasion to make someone feel special. Whether you're celebrating a birthday, saying thank you, cheering someone up, or simply sending a sweet surprise just because — our Indulge Treat Packages are the perfect way to show love and appreciation. Whether it's a milestone moment or a simple craving, these thoughtfully curated boxes bring joy, flavor, and convenience to your table. Each package is carefully filled with a mix of our best-selling cakes, pastries, and snacks — all freshly baked and ready to enjoy. Perfect for birthdays, office treats, family weekends, school snacks, or surprise gifting. Each box can be personalized with a heartfelt note or message for your loved one — because sometimes, a few kind words and a sweet treat can make all the difference. Thoughtful. Delicious. Memorable. Send a treat, make someone smile.</p>
+            </div>
+            
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/elegantyellow.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Elegant Yellow Bloom Cake</h3>
+                        <p>A classy 3-layer cake with three flavors of your choice, beautifully finished with fondant covering. Adorned with delicate floral accents, golden toppers, and a “Happy Birthday” sign — making it a perfect centerpiece for any celebration.
+	•	Size: 8-inch round, 7-inch high
+	•	Flavors: Choice of 3 (Vanilla, Chocolate, Red Velvet, Lemon, etc.)</p>
+                        <span class="price">UGX 120,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/pinkribbon.jpg" alt="Matoke Spice Cake">
+                    <div class="menu-item-content">
+                        <h3>Pink Ribbon Buttercream Cake</h3>
+                        <p>A charming 2-layer cake with soft pink ribbon detailing, frosted in smooth buttercream and finished with edible golden pearls. Its elegant simplicity makes it perfect for birthdays, small celebrations, and even photoshoots.
+	•	Size: 7-inch round, 5.5-inch high (≈ 1kg)
+	•	Flavors (choose 1): Vanilla, Strawberry, Bubblegum, Pineapple, Blueberry, or Lemon
+</p>
+                        <span class="price">UGX 60,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/pinkdrip.jpg" alt="Gold-Dusted Cupcakes">
+                    <div class="menu-item-content">
+                        <h3>Pink Drip & Cupcake Topper Cake</h3>
+                        <p>A stunning 3-layer cake with a mix of two delicious flavors, frosted with smooth buttercream icing. Decorated with an elegant black drip, edible pearls, a cupcake topper, and a butterfly accent.
+	•	Size: 8-inch round, 6.5-inch high
+	•	Perfect for birthdays, anniversaries, and celebrations of love.
+.</p>
+                        <span class="price">UGX 100,000 each</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cake Loaves Section -->
+    <section class="section menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>🍰 The Indulge Cake Loaves</h2>
+                <p>Soft, moist, and bursting with flavor — our cake loaves are perfect for tea time, kids' snack packs, and everyday indulgence. Available in a variety of delicious flavors including vanilla, lemon, banana, marble, strawberry, red velvet, chocolate, and our signature fruit cake loaf. Baked fresh and perfectly portioned for sharing or on-the-go enjoyment.</p>
+            </div>
+            
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/loaf6.jpg" alt="Passionfruit Tartlets">
+                    <div class="menu-item-content">
+                        <h3>Passionfruit Tartlets</h3>
+                        <p>Buttery shortcrust filled with tangy passionfruit curd and fresh berries.</p>
+                        <span class="price">UGX 12,000 each</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/loaf1.jpg" alt="Chocolate Noir Entremet">
+                    <div class="menu-item-content">
+                        <h3>Chocolate Noir Entremet</h3>
+                        <p>Layers of dark chocolate mousse, chocolate sponge, and chocolate glaze.</p>
+                        <span class="price">UGX 90,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/loaf2.jpg" alt="Rainbow Eclairs">
+                    <div class="menu-item-content">
+                        <h3>Rainbow Eclairs</h3>
+                        <p>Colorful choux pastry filled with vanilla custard and topped with glaze.</p>
+                        <span class="price">UGX 10,000 each</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="imgs/loaf3.jpg" alt="Rainbow Eclairs">
+                    <div class="menu-item-content">
+                        <h3>Rainbow Eclairs</h3>
+                        <p>Colorful choux pastry filled with vanilla custard and topped with glaze.</p>
+                        <span class="price">UGX 10,000 each</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="imgs/loaf4.jpg" alt="Rainbow Eclairs">
+                    <div class="menu-item-content">
+                        <h3>Rainbow Eclairs</h3>
+                        <p>Colorful choux pastry filled with vanilla custard and topped with glaze.</p>
+                        <span class="price">UGX 10,000 each</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="imgs/loaf5.jpg" alt="Rainbow Eclairs">
+                    <div class="menu-item-content">
+                        <h3>Rainbow Eclairs</h3>
+                        <p>Colorful choux pastry filled with vanilla custard and topped with glaze.</p>
+                        <span class="price">UGX 10,000 each</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pastry Bar Section -->
+    <section class="section">
+        <div class="container">
+            <div class="pastry-section">
+                <div class="pastry-header">
+                    <h2>The Indulge Tea Pastry Bar</h2>
+                    <p>At The Indulge Cake Haven UG, we've got your tea time, snack time, breakfast meetings, school packs, and picnic cravings sorted — with our freshly baked pastries, made with love and the finest ingredients!</p>
+                </div>
+                
+                <div class="pastry-container">
+                    <div class="pastry-menu">
+                        <h3 class="section-title"><span class="emoji">🧁</span> Our Pastry Menu</h3>
+                        <table class="pastry-table">
+                            <thead>
+                                <tr>
+                                    <th>Pastry Item</th>
+                                    <th>Minimum Order</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Croissants</td>
+                                    <td>12 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Chapatis</td>
+                                    <td>15 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Kebabs</td>
+                                    <td>11 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Donuts</td>
+                                    <td>13 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Cinnamon Rolls</td>
+                                    <td>20 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Swissrolls</td>
+                                    <td>18 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Cupcakes</td>
+                                    <td>12 pieces</td>
+                                </tr>
+                                <tr>
+                                    <td>Muffins</td>
+                                    <td>6 pieces</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pastry-uses">
+                        <h3 class="section-title"><span class="emoji">🎒</span> Perfect For</h3>
+                        <ul class="uses-list">
+                            <li>School lunchboxes</li>
+                            <li>Office tea breaks</li>
+                            <li>Family picnics</li>
+                            <li>Breakfast meetings</li>
+                            <li>Any function that deserves a delicious touch!</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="note">
+                    <p><span class="emoji">💡</span> We encourage a 48 hour preorder so your order comes out of the oven hot, fresh, and made just for YOU — no day-olds, no disappointments. Let us bring the taste to your table! <span class="emoji">🍽️💕</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section menu" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our <span>Pastry</span> Menu</h2>
+                <p>From classic favorites to innovative creations, each item is made with the finest ingredients and a touch of love.</p>
+            </div>
+        </div>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/birth4.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Two Tier Madeira</h3>
+                        <p>Five layers, three flavors in 9'6' size. Perfect for weddings and special celebrations.</p>
+                        <span class="price">UGX 200,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth5.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Elegant Yellow Bloom Cake</h3>
+                        <p>A classy 3-layer cake with three flavors of your choice, beautifully finished with fondant covering. Adorned with delicate floral accents, golden toppers, and a “Happy Birthday” sign — making it a perfect centerpiece for any celebration.
+	•	Size: 8-inch round, 7-inch high
+	•	Flavors: Choice of 3 (Vanilla, Chocolate, Red Velvet, Lemon, etc.)</p>
+                        <span class="price">UGX 120,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth6.jpg" alt="Matoke Spice Cake">
+                    <div class="menu-item-content">
+                        <h3>Pink Ribbon Buttercream Cake</h3>
+                        <p>A charming 2-layer cake with soft pink ribbon detailing, frosted in smooth buttercream and finished with edible golden pearls. Its elegant simplicity makes it perfect for birthdays, small celebrations, and even photoshoots.
+	•	Size: 7-inch round, 5.5-inch high (≈ 1kg)
+	•	Flavors (choose 1): Vanilla, Strawberry, Bubblegum, Pineapple, Blueberry, or Lemon
+</p>
+                        <span class="price">UGX 60,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth7.jpg" alt="Gold-Dusted Cupcakes">
+                    <div class="menu-item-content">
+                        <h3>Pink Drip & Cupcake Topper Cake</h3>
+                        <p>A stunning 3-layer cake with a mix of two delicious flavors, frosted with smooth buttercream icing. Decorated with an elegant black drip, edible pearls, a cupcake topper, and a butterfly accent.
+	•	Size: 8-inch round, 6.5-inch high
+	•	Perfect for birthdays, anniversaries, and celebrations of love.
+.</p>
+                        <span class="price">UGX 100,000 each</span>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/birth10.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Two Tier Madeira</h3>
+                        <p>Five layers, three flavors in 9'6' size. Perfect for weddings and special celebrations.</p>
+                        <span class="price">UGX 200,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth11.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Elegant Yellow Bloom Cake</h3>
+                        <p>A classy 3-layer cake with three flavors of your choice, beautifully finished with fondant covering. Adorned with delicate floral accents, golden toppers, and a “Happy Birthday” sign — making it a perfect centerpiece for any celebration.
+	•	Size: 8-inch round, 7-inch high
+	•	Flavors: Choice of 3 (Vanilla, Chocolate, Red Velvet, Lemon, etc.)</p>
+                        <span class="price">UGX 120,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth12.jpg" alt="Matoke Spice Cake">
+                    <div class="menu-item-content">
+                        <h3>Pink Ribbon Buttercream Cake</h3>
+                        <p>A charming 2-layer cake with soft pink ribbon detailing, frosted in smooth buttercream and finished with edible golden pearls. Its elegant simplicity makes it perfect for birthdays, small celebrations, and even photoshoots.
+	•	Size: 7-inch round, 5.5-inch high (≈ 1kg)
+	•	Flavors (choose 1): Vanilla, Strawberry, Bubblegum, Pineapple, Blueberry, or Lemon
+</p>
+                        <span class="price">UGX 60,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/birth13.jpg" alt="Gold-Dusted Cupcakes">
+                    <div class="menu-item-content">
+                        <h3>Pink Drip & Cupcake Topper Cake</h3>
+                        <p>A stunning 3-layer cake with a mix of two delicious flavors, frosted with smooth buttercream icing. Decorated with an elegant black drip, edible pearls, a cupcake topper, and a butterfly accent.
+	•	Size: 8-inch round, 6.5-inch high
+	•	Perfect for birthdays, anniversaries, and celebrations of love.
+.</p>
+                        <span class="price">UGX 100,000 each</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treat Packages Section -->
+    <section class="section menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Indulge Treat Packages</h2>
+                <p>You don't need a special occasion to make someone feel special. Whether you're celebrating a birthday, saying thank you, cheering someone up, or simply sending a sweet surprise just because — our Indulge Treat Packages are the perfect way to show love and appreciation. Whether it's a milestone moment or a simple craving, these thoughtfully curated boxes bring joy, flavor, and convenience to your table. Each package is carefully filled with a mix of our best-selling cakes, pastries, and snacks — all freshly baked and ready to enjoy. Perfect for birthdays, office treats, family weekends, school snacks, or surprise gifting. Each box can be personalized with a heartfelt note or message for your loved one — because sometimes, a few kind words and a sweet treat can make all the difference. Thoughtful. Delicious. Memorable. Send a treat, make someone smile.</p>
+            </div>
+            
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="imgs/elegantyellow.jpg" alt="Two Tier Madeira">
+                    <div class="menu-item-content">
+                        <h3>Elegant Yellow Bloom Cake</h3>
+                        <p>A classy 3-layer cake with three flavors of your choice, beautifully finished with fondant covering. Adorned with delicate floral accents, golden toppers, and a “Happy Birthday” sign — making it a perfect centerpiece for any celebration.
+	•	Size: 8-inch round, 7-inch high
+	•	Flavors: Choice of 3 (Vanilla, Chocolate, Red Velvet, Lemon, etc.)</p>
+                        <span class="price">UGX 120,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/pinkribbon.jpg" alt="Matoke Spice Cake">
+                    <div class="menu-item-content">
+                        <h3>Pink Ribbon Buttercream Cake</h3>
+                        <p>A charming 2-layer cake with soft pink ribbon detailing, frosted in smooth buttercream and finished with edible golden pearls. Its elegant simplicity makes it perfect for birthdays, small celebrations, and even photoshoots.
+	•	Size: 7-inch round, 5.5-inch high (≈ 1kg)
+	•	Flavors (choose 1): Vanilla, Strawberry, Bubblegum, Pineapple, Blueberry, or Lemon
+</p>
+                        <span class="price">UGX 60,000</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="imgs/pinkdrip.jpg" alt="Gold-Dusted Cupcakes">
+                    <div class="menu-item-content">
+                        <h3>Pink Drip & Cupcake Topper Cake</h3>
+                        <p>A stunning 3-layer cake with a mix of two delicious flavors, frosted with smooth buttercream icing. Decorated with an elegant black drip, edible pearls, a cupcake topper, and a butterfly accent.
+	•	Size: 8-inch round, 6.5-inch high
+	•	Perfect for birthdays, anniversaries, and celebrations of love.
+.</p>
+                        <span class="price">UGX 100,000 each</span>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Custom Cakes Section -->
+    <section class="section about" id="custom-cakes">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="imgs/section2.jpg" alt="Custom Cake Design">
+                </div>
+                <div class="about-content">
+                    <h2>Custom Cake Designs</h2>
+                    <p>Celebrate your special moments with a cake designed just for you. Our talented bakers will work with you to create a masterpiece that matches your vision.</p>
+                    <p>Whether it's a birthday, wedding, anniversary, or corporate event, we'll ensure your cake is as unique as your occasion with perfect flavors and stunning decorations.</p>
+                    <p>Book a consultation today to discuss your dream cake!</p>
+                    <a href="tel:+256743596530" class="btn btn-primary">Order Custom Cake</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Cake Gallery</h2>
+                <p>Browse through some of our recent creations that have delighted our customers.</p>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item" data-title="Elegant Wedding Cake">
+                    <img src="imgs/birth6.jpg" alt="Wedding Cake">
+                </div>
+                <div class="gallery-item" data-title="Colorful Birthday Cake">
+                    <img src="imgs/birth5.jpg" alt="Birthday Cake">
+                </div>
+                <div class="gallery-item" data-title="Luxury Red Velvet">
+                    <img src="imgs/birth4.jpg" alt="Red Velvet Cake">
+                </div>
+                <div class="gallery-item" data-title="Spice Cake Special">
+                    <img src="imgs/birth3.jpg" alt="Spice Cake">
+                </div>
+                <div class="gallery-item" data-title="Gold Cupcakes">
+                    <img src="imgs/birth2.jpg" alt="Cupcakes">
+                </div>
+                <div class="gallery-item" data-title="Fruit Tartlets">
+                    <img src="imgs/birth1.jpg" alt="Tartlets">
+                </div>
+                <div class="gallery-item" data-title="Elegant Wedding Cake">
+                    <img src="imgs/birth7.jpg" alt="Wedding Cake">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <p>At The Indulge Cake Haven UG, we bake with passion, crafting a wide range of cakes, desserts, and pastries to satisfy every sweet craving. Our mission goes beyond just creating delicious treats; it's about making a meaningful impact in our community.</p>
+                    <p>We are proud to donate 70% of our profits to the Benefaction Alms Foundation Uganda - a charity dedicated to uplifting underprivileged teenage mothers and vulnerable children. Through this foundation, we provide essential resources such as education, healthcare, and vocational training, empowering these young women to build a brighter future for themselves and their families.</p>
+                    <p>Every cake you enjoy at our bakery is a step towards helping someone rewrite their story, transforming lives with each bite. By choosing The Indulge Cake Haven UG, you're not just treating yourself to something sweet - you're also contributing to a cause that spreads hope and opportunity to those who need it most.</p>
+                    <p>THANK YOU FOR SUPPORTING OUR MISSION WITH EVERY INDULGENCE!</p>
+                    <a href="tel:+256743596530" class="btn btn-primary">Visit Us</a>
+                </div>
+                
+                <div class="about-img">
+                    <img src="imgs/other4.jpg" alt="Our Bakery">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAF Outreaches Section -->
+    <section class="section about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-img">
+                    <img src="imgs/bfm.jpg" alt="BAF Outreach">
+                </div>
+                <div class="about-content">
+                    <h2>The Indulge BAF Outreaches</h2>
+                    <p>Through our partnership with Benefaction Alms Foundation (BAF), The Indulge Cake Haven UG dedicates 70% of our profits to empowering vulnerable teenage girls. Every last Sunday of every three months, we organize community outreaches where we offer basic baking and pastry skills training, provide starter kits (flour, sugar, baking tools) to help girls begin from home, offer mentorship, counselling, and emotional support, share meals, sanitary pads, and other essential supplies, and teach life skills and entrepreneurship to encourage self-reliance.</p>
+                    <p>Our mission is to give every girl a second chance — with skills, confidence, and hope for a brighter future. Every cake you buy makes this possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customer Reviews</h2>
+                <p>Hear what our customers say about their experience with The Indulge Cake Haven</p>
+            </div>
+            
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img rc="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah K." class="review-avatar">
+                        <div>
+                            <h4 class="review-name">Sarah K.</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"The best cake I've ever had in Kampala! Ordered for my daughter's birthday and everyone was amazed. The flavors were perfect and the decoration was exactly as I requested. Will definitely order again!"</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <img rc="https://randomuser.me/api/portraits/men/32.jpg" alt="James M." class="review-avatar">
+                        <div>
+                            <h4 class="review-name">James M.</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"I ordered a custom cake for my wife's anniversary and it was absolutely stunning. The attention to detail was incredible and it tasted even better than it looked. The team was very professional throughout the process."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <img rc="https://randomuser.me/api/portraits/women/65.jpg" alt="Patricia N." class="review-avatar">
+                        <div>
+                            <h4 class="review-name">Patricia N.</h4>
+                            <div class="review-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-text">"The passionfruit tartlets are to die for! I order them for all our office meetings now. The Indulge Cake Haven has become our go-to for all corporate events. Quality is consistently excellent."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Us</h2>
+                <p>Visit our bakery in Kiwatule, Kampala</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d853.5751757512024!2d32.62284700582443!3d0.3644364880780353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sug!4v1756374754408!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>We'd love to hear from you! Visit our bakery, give us a call, or send us a message.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Kiwatule Central Road Opp NSA mall, Kampala, Uganda</p>
+                    <p><i class="fas fa-phone"></i> +256 743596530 / +256 764114764</p>
+                    <p><i class="fas fa-envelope"></i> info@indulgecakehaven.com</p>
+                    <p><i class="fas fa-clock"></i> Monday - Saturday: 8:00 AM - 7:00 PM<br>Sunday: 10:00 AM - 4:00 PM</p>
+                    
+                    <h3>Tap to follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/IndulgeCakeHavenUG" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/the_indulge_cake_haven_ug?igsh=NTd3dzE4ZjMybXRo&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@the_indulge_cake_haven?_t=ZM-8xlhKCy6tde&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/256743956530" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://x.com/indulge_ug?s=21" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/the-indulge-cake-haven-ug/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formsubmit.co/bagumanickson123@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Indulge Cake Haven Ug</h3>
+                    <p>Support More Than Just a Bakery. When you choose The Indulge Cake Haven UG, you're not only treating yourself to exceptional taste and delicious memories — you're also supporting a powerful mission. 70% of our profits go directly toward empowering vulnerable teenage mothers through the Benefaction Alms Foundation Uganda.</p>
+                    <p>Indulge with us. Enjoy the taste. Change a life.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#menu"><i class="fas fa-chevron-right"></i> Menu</a></li>
+                        <li><a href="#custom-cakes"><i class="fas fa-chevron-right"></i> Custom Cakes</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Kiwatule Central Rd Opp NSA Mall</p>
+                    <p><i class="fas fa-phone"></i> +256 743956530/ +256 764114764</p>
+                    <p><i class="fas fa-envelope"></i> info@indulgecakehaven.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Indulge Cake Haven. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Floating WhatsApp and Message Buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/256743956530" class="floating-btn whatsapp-btn" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:md@theindulgecakehaven.com" class="floating-btn message-btn" aria-label="Message">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Sticky Navigation on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            header.classList.toggle('sticky', window.scrollY > 50);
+            
+            // Show/hide back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For demonstration, we'll just show an alert
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+        
+        // Animation on scroll
+        window.addEventListener('load', () => {
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll('.menu-item, .about-img, .about-content, .gallery-item, .contact-info, .contact-form, .review-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+             // Set initial state for animated elements
+            const animatedElements = document.querySelectorAll('.menu-item, .about-img, .about-content, .gallery-item, .contact-info, .contact-form, .review-card');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // Run once on load
+            animateOnScroll();
+            
+            // Run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+        
+        // Add hover effect to gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('img').style.transform = 'scale(1.1)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('img').style.transform = 'scale(1)';
+            });
+        });
+        
+        // Add ripple effect to buttons
+        const buttons = document.querySelectorAll('.btn');
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                const x = e.clientX - e.target.getBoundingClientRect().left;
+                const y = e.clientY - e.target.getBoundingClientRect().top;
+                
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
